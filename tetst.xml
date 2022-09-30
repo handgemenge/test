@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Configures VPN settings, including authentication.</string>
+			<key>PayloadDisplayName</key>
+			<string>VPN (K3/VoD)</string>
+			<key>PayloadIdentifier</key>
+			<string>K3.Marvin-Berechner.vpnconfig</string>
+			<key>PayloadOrganization</key>
+			<string>K3</string>
+			<key>PayloadType</key>
+			<string>com.apple.vpn.managed</string>
+			<key>PayloadUUID</key>
+			<string>69C682E9-DF75-40AF-AF98-11CA6931889F</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>UserDefinedName</key>
+			<string>K3/VoD</string>
+			<key>VPN</key>
+			<dict>
+				<key>AuthName</key>
+				<string>Marvin-Berechner</string>
+				<key>AuthenticationMethod</key>
+				<string>Password</string>
+				<key>OnDemandEnabled</key>
+				<integer>1</integer>
+				<key>OnDemandRules</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>InterfaceTypeMatch</key>
+						<string>WiFi</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Ignore</string>
+						<key>InterfaceTypeMatch</key>
+						<string>Cellular</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Ignore</string>
+					</dict>
+				</array>
+				<key>RemoteAddress</key>
+				<string>DEFAULT</string>
+			</dict>
+			<key>VPNSubType</key>
+			<string>net.openvpn.OpenVPN-Connect.vpnplugin</string>
+			<key>VPNType</key>
+			<string>VPN</string>
+			<key>VendorConfig</key>
+			<dict>
+				<key>ca</key>
+				<string>-----BEGIN CERTIFICATE-----\nCACRT\n-----END CERTIFICATE-----</string>
+				<key>cert</key>
+				<string>-----BEGIN CERTIFICATE-----\nCLIENTCRT\n-----END CERTIFICATE-----</string>
+				<key>cipher</key>
+				<string>AES-256-CBC</string>
+				<key>client</key>
+				<string>NOARGS</string>
+				<key>comp-Izo</key>
+				<string>NOARGS</string>
+				<key>dev</key>
+				<string>tun</string>
+				<key>dhcp-option</key>
+				<string>DNS 192.168.10.100</string>
+				<key>key</key>
+				<string>-----BEGIN PRIVATE KEY-----\nCLIENTKEY\n-----END PRIVATE KEY-----</string>
+				<key>ns-cert-type-server</key>
+				<string>NOARGS</string>
+				<key>push-peer-info</key>
+				<string>NOARGS</string>
+				<key>remote</key>
+				<string>K3 1194 udp</string>
+				<key>route</key>
+				<string>192.168.9.0 255.255.255.0 vpn_gateway</string>
+				<key>route-nopull</key>
+				<string>NOARGS</string>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>OpenVPN Configuration Payload for Marvin-Berechner@K3. Includes custom OpenVPN directives {client=NOARGS, dev=tun, ns-cert-type-server=NOARGS, cipher=AES-256-CBC, comp-Izo=NOARGS, route-nopull=NOARGS, route=192.168.9.0 255.255.255.0 vpn_gateway, dhcp-option=DNS 192.168.10.100, push-peer-info=NOARGS}.</string>
+	<key>PayloadDisplayName</key>
+	<string>K3 OpenVPN Marvin@Berechner</string>
+	<key>PayloadIdentifier</key>
+	<string>K3.Marvin-Berechner</string>
+	<key>PayloadOrganization</key>
+	<string>K3</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7B96296B-2F40-4581-A58A-6533813D7C31</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
